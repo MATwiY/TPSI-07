@@ -65,7 +65,7 @@
                         th:text="${com}"></p>
                     </td>
                     <td >
-                        <img class="empPhoto" th:src="${emp.getPhotoUrl()}"/>
+                        <img th:class="empPhoto" th:src="${emp.getPhotoUrl()}"/>
                     </td>
                 </tr>
             </table>
