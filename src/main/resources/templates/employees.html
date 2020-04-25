@@ -41,7 +41,7 @@
                     <th>Uwagi</th>
                     <th>Zdjęcie</th>
                 </tr>
-                <tr th:each="emp,iterStat : ${employees}">
+                <tr th:each="emp,iterStat : ${employees}" th:classappend="${emp.getDateOfTermination()} ? 'fired' : ''" >
                     <td th:text="${iterStat.count}"></td>
                     <td th:text="|${emp.getFirstName()} ${emp.getLastName()}|"></td>
                     <td th:text="${emp.getJobTitle()}"></td>
